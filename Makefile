@@ -32,7 +32,6 @@ certs-test:
 
 	rm -rf common/certs/*.crt
 	cp certs/sets/current/gen/crt/ca-root.crt common/certs
-	cp certs/sets/current/gen/crt/ca-untrusted-root.crt common/certs
 
 .PHONY: certs-prod
 certs-prod:
@@ -40,7 +39,6 @@ certs-prod:
 	cd certs/sets && rm -rf current && cp -R prod current
 
 	rm -rf common/certs/*.crt
-	cp certs/sets/current/gen/crt/ca-untrusted-root.crt common/certs
 
 .PHONY: clean-certs
 clean-certs:
