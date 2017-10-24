@@ -1,0 +1,26 @@
+---
+subdomain: mixed
+layout: page
+favicon: yellow
+background: rgb(246, 207, 47)
+---
+
+<div id="content">
+  <h1 style="font-size: 6vw;">
+    {{ page.subdomain }}.{{ site.domain }}/delayed
+  </h1>
+  <div id="img-container"></div>
+</div>
+
+<div id="footer">
+  This page triggers a mixed content image load<br>after a delay of 5 seconds.
+</div>
+
+<script>
+  setTimeout(function() {
+    var img = document.createElement('img');
+    img.src = "http://{{ page.subdomain }}.{{ site.domain }}/image.jpg";
+    img.alt = "HTTP image";
+    document.getElementById("img-container").appendChild(img);
+  }, 5000);
+</script>

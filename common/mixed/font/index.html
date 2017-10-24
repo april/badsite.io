@@ -1,0 +1,26 @@
+---
+title: mixed font
+layout: page
+favicon: red
+background: gray
+---
+
+<style>
+  @font-face {
+    font-family: Inception;
+    src: url(http://{{ site.http-domain }}/resources/font.ttf) format("truetype");
+  }
+  #content h1 {
+    font-family: Inception !important;
+  }
+</style>
+
+<div id="content">
+  <h1 style="font-size: 9vw;">
+    MIXED FONT
+  </h1>
+</div>
+
+<div id="footer">
+  This page triggers an insecure font using CSS.
+</div>

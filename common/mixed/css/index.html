@@ -1,0 +1,24 @@
+---
+title: mixed css
+layout: page
+favicon: red
+background: gray
+---
+
+<style>
+  .triggered {
+    display: none;
+  }
+</style>
+
+<div id="content">
+  <h1 style="font-size: 9vw;">
+    mixed css
+  </h1>
+</div>
+
+<div id="footer">
+  This page <span class="not-triggered">triggers</span><span class="triggered">has triggered</span> insecure CSS.
+</div>
+
+<link rel="stylesheet" href="http://{{ site.http-domain }}/resources/stylesheet.css">

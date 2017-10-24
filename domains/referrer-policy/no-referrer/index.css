@@ -1,0 +1,6 @@
+#content img {
+  width: 60vw;
+  max-width: 512px;
+  margin-top: 2.5vh;
+  border: 0;
+}

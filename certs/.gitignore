@@ -1,0 +1,6 @@
+/src/crt/*.srl
+*.key
+sets/current
+sets/*/gen
+sets/*/pregen/crt
+sets/*/pregen/key

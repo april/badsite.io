@@ -1,0 +1,5 @@
+# `domain` and `http-domain` are populated via environment.
+
+# Build settings
+exclude: ["badsite.io.png", "certs/sets/prod"]
+markdown: kramdown

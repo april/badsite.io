@@ -1,0 +1,16 @@
+---
+subdomain: observatory-a-plus
+layout: page
+favicon: green
+background: green
+---
+
+<div id="content">
+  <h1 class="medium">
+    {{ page.subdomain }}.<br />{{ site.domain }}
+  </h1>
+</div>
+
+<div id="footer">
+  This site scores an A+ on the <a href="https://observatory.mozilla.org/analyze.html?host={{ page.subdomain }}.{{ site.domain }}">Mozilla Observatory</a>.
+</div>

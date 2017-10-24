@@ -1,0 +1,20 @@
+---
+subdomain: no-csp-xss
+layout: page
+favicon: red
+background: red
+---
+
+<div id="content">
+  <h1 class="medium">
+    {{ page.subdomain }}.<br />{{ site.domain }}
+  </h1>
+</div>
+
+<div id="footer">
+  This site has no Content Security Policy<br>
+  to protect it against XSS vulnerabilities<br>
+  caused by the <code>eval()</code> function.
+</div>
+
+<script type="text/javascript" src="/scripts/xss-eval.js"></script>

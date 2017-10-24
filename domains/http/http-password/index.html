@@ -1,0 +1,24 @@
+---
+subdomain: http-password
+layout: page
+favicon: red
+background: red
+---
+
+<style>
+#content input {
+  font-size: 4vw;
+}
+</style>
+
+<div id="content">
+  <h1 style="font-size: 5vw;">
+    {{ page.subdomain }}.<br>{{ site.domain }}
+  </h1>
+  <br><br><br>
+  <input type="password" id="value" placeholder="password input field" value="password"/>
+</div>
+
+<div id="footer">
+  This page contains a lone password field<br> that is <b>not</b> wrapped in a <tt>&lt;form&gt;</tt> tag.
+</div>

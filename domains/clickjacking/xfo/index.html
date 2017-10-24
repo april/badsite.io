@@ -1,0 +1,19 @@
+---
+subdomain: xfo
+layout: page
+favicon: green
+background: green
+has_style: true
+---
+<iframe src="https://clickjacked-domain-xfo.{{ site.domain }}/"></iframe>
+
+<div id="content">
+  <h1 class="medium">
+    {{ page.subdomain }}.<br />{{ site.domain }}
+  </h1>
+</div>
+
+<div id="footer">
+  Underneath this page lurks another domain with clickjacking<br>
+  protection. Click on the domain above for a demonstration.
+</div>

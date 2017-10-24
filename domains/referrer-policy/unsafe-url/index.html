@@ -1,0 +1,21 @@
+---
+subdomain: unsafe-url
+layout: page
+favicon: red
+background: red
+has_style: true
+---
+<div id="content">
+  <h1 class="medium">
+    {{ page.subdomain }}.<br />{{ site.domain }}
+  </h1>
+
+  <div>
+    <img src="http://very.badssl.com/image.jpg" alt="very badssl">
+  </div>
+</div>
+
+<div id="footer">
+  When insecurely loading this good dog from<br>
+  <a href="https://badssl.com/">badssl.com</a>, a Referer header is sent.
+</div>

@@ -1,0 +1,21 @@
+---
+subdomain: csp-xss
+layout: page
+favicon: gray
+background: gray
+---
+
+<div id="content">
+  <h1 class="medium">
+    {{ page.subdomain }}.<br />{{ site.domain }}
+  </h1>
+</div>
+
+<div id="footer">
+  This site has a cross-site scripting (XSS) vulnerability,<br>
+  but is protected against attacks by a Content Security Policy.
+</div>
+
+<script type="text/javascript">
+  alert("XSS found on " + document.domain);
+</script>

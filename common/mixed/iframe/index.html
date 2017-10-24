@@ -1,0 +1,22 @@
+---
+title: mixed iframe
+layout: page
+favicon: red
+background: gray
+---
+
+<style>
+  iframe {
+    width: 20vh;
+    height: 10vh;
+    max-width: 256;
+    margin-top: 5vh;
+  }
+</style>
+
+<div id="content">
+  <h1 style="font-size: 7vw;">
+    mixed iframe
+  </h1>
+  <iframe src="http://{{ site.http-domain }}/resources/iframe.html"></iframe>
+</div>

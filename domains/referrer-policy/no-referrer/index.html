@@ -1,0 +1,21 @@
+---
+subdomain: no-referrer
+layout: page
+favicon: green
+background: green
+has_style: true
+---
+<div id="content">
+  <h1 class="medium">
+    {{ page.subdomain }}.<br />{{ site.domain }}
+  </h1>
+
+  <div>
+    <img src="http://very.badssl.com/image.jpg" alt="very badssl">
+  </div>
+</div>
+
+<div id="footer">
+  When loading this good dog from<br>
+  <a href="https://badssl.com/">badssl.com</a>, no Referer header is sent.
+</div>
