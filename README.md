@@ -9,7 +9,7 @@ Visit [`badsite.io`](https://badsite.io/) for a list of test subdomains, includi
 
 ## Server Setup
 
-Stock Ubuntu VM, DNS A records for `badsite.io.` and `*.badsite.io.` pointing to the VM.
+Stock Ubuntu VM, DNS A records for `badsite.test.` and `*.badsite.test.` pointing to the VM.
 
 ### Testing and development
 
