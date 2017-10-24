@@ -1,9 +1,3 @@
-<center>
-  <a href="https://badsite.io/">
-    <img src="./badsite.png" width="472" />
-  </a>
-</center>
-
 Please note that this project is in beta, due to requirements to be completed by MozFest.
 
 Visit [`badsite.io`](https://badsite.io/) for a list of test subdomains, including:
