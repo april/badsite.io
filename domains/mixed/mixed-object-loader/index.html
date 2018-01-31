@@ -1,0 +1,18 @@
+---
+subdomain: mixed-object-loader
+layout: page
+favicon: red
+background: gray
+---
+
+<div id="content">
+  <h1 style="font-size: 8vw;">
+    {{ page.subdomain }}.<br>{{ site.domain }}
+  </h1>
+</div>
+
+<embed src="mixed-object-loader-{{ site.domain }}.swf" height="1" width="1"></script>
+
+<div id="footer">
+  This page contains a Flash object that makes an HTTP request.
+</div>
