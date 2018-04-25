@@ -1,0 +1,17 @@
+---
+subdomain: svg-xss
+layout: page
+favicon: red
+background: red
+---
+
+<div id="content">
+  <h1 class="medium">
+    {{ page.subdomain }}.<br />{{ site.domain }}
+  </h1>
+  <img src="svg-xss.svg">
+</div>
+
+<div id="footer">
+  This site loads an <a href="svg-xss.svg">SVG image that contains JavaScript</a>.<br>
+</div>
