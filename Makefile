@@ -17,17 +17,17 @@ deploy: certs-prod jekyll-prod upload nginx
 
 .PHONY: jekyll-test
 jekyll-test:
-	DOMAIN="badsite.test" jekyll build
+	DOMAIN="badsite.test" CROSS_ORIGIN_DOMAIN="badsite.cross-origin.test" jekyll build
 
 .PHONY: jekyll-prod
 jekyll-prod:
-	DOMAIN="badsite.io" jekyll build
+	DOMAIN="badsite.io" CROSS_ORIGIN_DOMAIN="badsite.cross-origin.io" jekyll build
 
 ################ Certs ################
 
 .PHONY: certs-test
 certs-test:
-	cd certs && make test O=sets/test D=badsite.test
+	cd certs && make test O=sets/test D="badsite.test cross-origin.test"
 	cd certs/sets && rm -rf current && cp -R test current
 
 	rm -rf common/certs/*.crt
@@ -35,7 +35,7 @@ certs-test:
 
 .PHONY: certs-prod
 certs-prod:
-	cd certs && make prod O=sets/prod D=badsite.io
+	cd certs && make prod O=sets/prod D="badsite.io cross-origin.io"
 	cd certs/sets && rm -rf current && cp -R prod current
 
 	rm -rf common/certs/*.crt

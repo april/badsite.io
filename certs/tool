@@ -7,6 +7,8 @@ OUT=$1
 shift
 DOMAIN=$1
 shift
+CROSS_ORIGIN_DOMAIN=$1
+shift
 
 mkdir -p $(dirname $OUT)
 PREGEN_OUT=$(echo "$OUT" | sed "s#/gen/#/pregen/#") 
@@ -28,14 +30,14 @@ dhparam)
 gen-csr)
   openssl req -new \
     -out $OUT \
-    -config <(cat $1 | sed "s/__DOMAIN__/$DOMAIN/g") \
+    -config <(cat $1 | sed "s/__DOMAIN__/$DOMAIN/g" | sed "s/__CROSS_ORIGIN_DOMAIN__/$CROSS_ORIGIN_DOMAIN/g") \
     -key $2
   ;;
 gen-csr-no-subject)
   openssl req -new \
     -subj / \
     -out $OUT \
-    -config <(cat $1 | sed "s/__DOMAIN__/$DOMAIN/g") \
+    -config <(cat $1 | sed "s/__DOMAIN__/$DOMAIN/g" | sed "s/__CROSS_ORIGIN_DOMAIN__/$CROSS_ORIGIN_DOMAIN/g") \
     -key $2
   ;;
 gen-ca)
@@ -61,7 +63,7 @@ self-sign)
     -days $1 \
     -$2 \
     -extensions $3 \
-    -extfile <(cat $4 | sed "s/__DOMAIN__/$DOMAIN/g") \
+    -extfile <(cat $4 | sed "s/__DOMAIN__/$DOMAIN/g" | sed "s/__CROSS_ORIGIN_DOMAIN__/$CROSS_ORIGIN_DOMAIN/g") \
     -in $5 \
     -signkey $6
   ;;
@@ -73,7 +75,7 @@ sign)
     -$2 \
     -out $OUT \
     -extensions $3 \
-    -extfile <(cat $4 | sed "s/__DOMAIN__/$DOMAIN/g") \
+    -extfile <(cat $4 | sed "s/__DOMAIN__/$DOMAIN/g" | sed "s/__CROSS_ORIGIN_DOMAIN__/$CROSS_ORIGIN_DOMAIN/g") \
     -in $5 \
     -CAkey $6 \
     -CA $7

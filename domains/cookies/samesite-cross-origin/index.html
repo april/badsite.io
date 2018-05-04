@@ -1,0 +1,19 @@
+---
+subdomain: samesite
+layout: page
+favicon: green
+background: green
+---
+
+<div id="content">
+  <h1 class="medium">
+    {{ page.subdomain }}.<br />{{ site.cross-origin-domain }}
+  </h1>
+  <img src="https://samesite-strict.{{ site.domain }}/pixel.gif">
+  <img src="https://samesite-lax.{{ site.domain }}/pixel.gif">
+</div>
+
+<div id="footer">
+  This site sets makes cross-origin requests<br>
+  to the <a href="https://samesite-strict.{{ site.domain }}/">Strict</a> and <a href="https://samesite-lax.{{ site.domain }}/">Lax</a> cookie domains.
+</div>

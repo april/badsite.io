@@ -12,7 +12,7 @@
 
 # Note: Files and paths must not contain spaces.
 
-D = badsite.io
+D = badsite.io cross-origin.io
 MAIN_CERT_TYPE = rsa2048
 DAYS_DEFAULT = 730
 HASH_DEFAULT = sha256
