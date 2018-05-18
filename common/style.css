@@ -86,3 +86,7 @@ body.bg-red    { background-color: red; }
   height: 1.5em;
   vertical-align: middle;
 }
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,54 @@
+---
+subdomain: third-party-cross-origin
+layout: page
+favicon: red
+background: red
+---
+
+<div id="content">
+  <h1 class="medium">
+    {{ page.subdomain }}.<br />{{ site.domain }}
+  </h1>
+</div>
+
+<div id="footer">
+  <span id="untracked" class="hidden">
+    This site has failed to track you<br>
+    with either cookies or <tt>localStorage</tt>
+  </span>
+
+  <span id="cookies" class="hidden">
+    This site has tracked you with<br>
+    cookies but not <tt>localStorage</tt>.
+  </span>
+
+  <span id="localstorage" class="hidden">
+    This site has tracked you with<br>
+    <tt>localStorage</tt> but not cookies.
+  </span>
+
+  <span id="cookieslocalstorage" class="hidden">
+    This site has tracked you with<br>
+    both cookies and <tt>localStorage</tt>.
+  </span>
+</div>
+
+<script type="text/javascript">
+  var visibleId = window.location.search.includes('tracked_via_cookie') ? "cookies" : "";
+
+  try {
+    window.localStorage.setItem('foo', 'bar');
+    window.localStorage.removeItem('foo');
+
+    visibleId += "localstorage";
+  } catch (e) {
+    // pass
+  }
+
+  if (visibleId === "") {
+    visibleId = "untracked";
+  }
+
+  // show the tracking status
+  document.getElementById(visibleId).classList.remove('hidden');
+</script>

@@ -1,0 +1,19 @@
+---
+subdomain: third-party
+layout: page
+favicon: gray
+background: gray
+---
+
+<div id="content">
+  <h1 class="medium">
+    {{ page.subdomain }}.<br />{{ site.domain }}
+  </h1>
+  <img src="https://third-party.{{ site.cross-origin-domain }}/pixel.gif">
+  <iframe src="https://third-party.{{ site.cross-origin-domain }}/"></iframe>
+</div>
+
+<div id="footer">
+  This site attempts to track you
+  using <a href="https://third-party.{{ site.cross-origin-domain }}">a cross-origin domain</a>.
+</div>
